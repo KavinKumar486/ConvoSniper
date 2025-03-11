@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversniper Insights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        img {
+            max-width: 100%;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: {{ 'block' if show_visuals else 'none' }};
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #show-insights-btn {
+            display: {{ 'block' if not show_visuals else 'none' }};
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Conversniper Insights</h1>
+        <button id="show-insights-btn" onclick="window.location.href='/show_insights'">Show Insights</button>
+        {% for image_path in image_paths %}
+            <img src="{{ image_path }}" alt="Visualization">
+        {% endfor %}
+        <button onclick="window.location.href='/'" style="display: {{ 'block' if show_visuals else 'none' }}">Back to Home</button>
+    </div>
+</body>
+</html>

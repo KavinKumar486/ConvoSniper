@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading - Conversniper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .loading {
+            color: #007bff;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversniper</h1>
+    <div class="loading">Loading responses...</div>
+    <script>
+        // Poll for response and redirect back to index when ready
+        const content = "{{ content }}";
+        let pollInterval = setInterval(() => {
+            fetch(`/check_response/${encodeURIComponent(content)}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.status !== 'loading') {
+                    clearInterval(pollInterval);
+                    window.location.href = `/found_response?content=${encodeURIComponent(content)}`;
+                }
+            })
+            .catch(error => {
+                console.error('Polling error:', error);
+                clearInterval(pollInterval);
+                alert('Error polling for response: ' + error.message);
+            });
+        }, 1000);  // Poll every second
+    </script>
+</body>
+</html>

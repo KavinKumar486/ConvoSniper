@@ -1,0 +1,15 @@
+How to run?
+
+In the given folder set up redis and open terminal and navigate to redis folder and run the following command
+redis-server.exe
+
+Now open the conversniper folder and set up the main.py
+In discord_sniper,X_sniper and redit.py alter the credentials (given also works)
+
+Download the requirements.txt  before proceeding
+
+Now run the app.py enter your area of interest and the response will be generated now click on accept or reject
+
+go back to the main menu to view the post insights
+
+

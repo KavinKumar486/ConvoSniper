@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - Conversniper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        #response-display {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: block;
+        }
+        button {
+            margin: 5px;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #accept-btn {
+            background-color: #28a745;
+        }
+        #accept-btn:hover {
+            background-color: #218838;
+        }
+        #reject-btn {
+            background-color: #dc3545;
+        }
+        #reject-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Conversniper Results</h1>
+        <div id="response-display">
+            <p><strong>Source:</strong> Reddit</p>
+            <p><strong>Content:</strong> I made a Python code that identifies unused code in your project</p>
+            <p><strong>Response:</strong> Woohooooo that looks like a turnaround of events for project. Want us to tell the hudles??</p>
+            <button id="accept-btn" onclick="window.location.href='/accept_reject/accept'">Accept</button>
+            <button id="reject-btn" onclick="window.location.href='/accept_reject/reject'">Reject</button>
+        </div>
+    </div>
+</body>
+</html>

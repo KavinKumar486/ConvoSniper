@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-section, .response-section, .insights-section {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+input {
+    width: 70%;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.response-section p {
+    margin: 10px 0;
+}
+
+.insights-section img {
+    max-width: 100%;
+    margin: 10px 0;
+}
