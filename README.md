@@ -310,6 +310,3 @@ This repository is a prototype, not a production-ready autonomous engagement pla
 - Containerize Redis, MongoDB, backend workers, and the dashboard with Docker Compose.
 - Replace hardcoded local paths with repository-relative configuration.
 
-## License
-
-Add a license before distributing or accepting external contributions. Until a license is included, all rights remain with the copyright holder.
