@@ -4,7 +4,7 @@
 
 ConvoSniper collects public community discussions, analyzes their sentiment and engagement, identifies potentially notable posts, and generates context-aware response drafts. The prototype integrates Reddit and Discord data sources, a DistilBERT-based sentiment classifier, engagement-based anomaly detection, MongoDB persistence, and a Flask dashboard.
 
-> **Project status:** Academic / experimental prototype. The repository contains platform-specific integrations and automation code, but the current implementation needs credential management, path configuration, dependency updates, and end-to-end testing before deployment. Generated responses should be reviewed by a human before being posted.
+
 
 ## Highlights
 
